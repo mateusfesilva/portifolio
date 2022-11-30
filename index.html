@@ -30,7 +30,7 @@
         </section>
 
         <section id="about">
-            <div class="content">
+            <div class="content init-hidden-left">
                 <div class="smtxt">
                     <h1>sobre mim</h1>
                     <p>Sou um desenvolvedor de software com experiência técnica relacionada à interface gráfica e banco
@@ -47,13 +47,13 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="init-hidden">
             <span class="effect10"></span>
             <span class="effect20"></span>
             <span class="effect30"></span>
-            <h1>projetos</h1>
+            <h1 class="">projetos</h1>
             <div class="flex-proj">
-                <div class="autosys">
+                <div class="autosys init-hidden-right">
                     <div class="zoom">
                         <a href="https://autosystemsecurity.azurewebsites.net" target="_blank"><img class="tempAS"
                                 src="img/autosys.png" alt="soon">
@@ -66,7 +66,7 @@
                     </div></a>
                 </div>
 
-                <div class="calc">
+                <div class="calc init-hidden-left">
                     <div class="zoom">
                         <a href="https://github.com/mateusfesilva/calculadora-PHP" target="_blank"> <img class="tempCA"
                                 src="img/calc.png" alt="calculadora em php" srcset="">
@@ -85,7 +85,7 @@
             <span class="effect2"></span>
             <span class="effect3"></span>
             <span class="effect4"></span>
-            <div class="flex-tech">
+            <div class="flex-tech init-hidden-right">
                 <h1>tecnologias</h1>
                 <p>Principais tecnologias utilizadas por mim:</p>
                 <!-- <h1>tecnologias</h1> -->
@@ -159,7 +159,7 @@
                             style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                     </div>
                     <div class="copy">
-                        <p>© Copyright 2022 - 2023 Mateus Silva Ferreira.</p>
+                        <p>© Copyright Mateus Silva Ferreira.</p>
                     </div>
 
                 </div>
@@ -169,5 +169,36 @@
     </main>
 
 </body>
+
+<!-- ANIMAÇÃO COM O SCROLL -->
+<script>
+    const observer = new IntersectionObserver(entries => {
+        console.log(entries)
+
+        Array.from(entries).forEach(entry => {
+            if (entry.intersectionRatio >= .5) {
+                entry.target.classList.add('init-hidden-off')
+            }
+
+        })
+    }, {
+        threshold: .5
+    });
+
+    Array.from(document.querySelectorAll('.init-hidden')).forEach(elemento => {
+        observer.observe(elemento);
+
+    })
+
+    Array.from(document.querySelectorAll('.init-hidden-left')).forEach(elemento => {
+        observer.observe(elemento);
+
+    })
+
+    Array.from(document.querySelectorAll('.init-hidden-right')).forEach(elemento => {
+        observer.observe(elemento);
+
+    })
+</script>
 
 </html>

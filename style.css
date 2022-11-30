@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: #F5EBE0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+.init-hidden {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.init-hidden-left {
+    position: relative;
+    right: -70px;
+    opacity: 0;
+    transition: opacity 1s linear;
+    transition: 1s;
+}
+
+.init-hidden-right {
+    position: relative;
+    right: 70px;
+    opacity: 0;
+    transition: opacity 1s linear;
+    transition: 1s;
+}
+
+.init-hidden-off {
+    right: 0;
+    opacity: 1;
+}
+
+/* PRIMEIRO BLOCO - INÍCIO DA PÁGINA */
+
+#home {
+    position: absolute;
+    display: flex;
+    background: #1E1E1E;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#home h1 {
+    position: relative;
+    color: #ccc;
+    font-size: 72px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Libre Caslon Display';
+}
+
+#home nav {
+    position: relative;
+    font-family: 'Maitree';
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+#home a {
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.3s;
+    letter-spacing: 0.1em;
+    color: #ccc;
+}
+
+#home a:hover {
+    font-style: italic;
+    letter-spacing: 0.2em;
+}
+
+#home img {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* SEGUNDO BLOCO - SOBRE MIM */
+
+#about {
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    background: #F3EFE0;
+    box-shadow: 1px 1px 20px -5px #6363635a;
+    z-index: 1000;
+}
+
+.content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+#about h1 {
+    position: relative;
+    color: #1E1E1E;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 32px;
+    padding-bottom: 1em;
+}
+
+#about p {
+    position: relative;
+    color: #1E1E1E;
+    font-family: 'Maitree';
+    font-size: 18px;
+}
+
+#about img {
+    height: 250px;
+    position: relative;
+}
+
+/*  TERCEIRO BLOCO - PROJETOS */
+
+#projects {
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    background: #FEFCF3;
+}
+
+
+.effect10 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 100px;
+    width: 100px;
+    filter: blur(4px);
+    position: absolute;
+    top: 75%;
+    right: 12%;
+    transition: .5s;
+    z-index: 0;
+}
+
+.effect20 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 70px;
+    width: 70px;
+    filter: blur(2px);
+    position: absolute;
+    top: 90%;
+    right: 30%;
+    transition: .5s;
+    z-index: 0;
+}
+
+#projects h1 {
+    position: relative;
+    color: #1E1E1E;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+}
+
+.flex-proj {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 10em;
+}
+
+
+/* PROJETO 1 - AUTOSYSTEM */
+
+.autosys {
+    background: #F5EBE0;
+    max-width: 23em;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin-right: 4.6em;
+    box-shadow: 1px 1px 50px 5px #1e1e1e49;
+}
+
+.autosys .a {
+    color: #1E1E1E !important;
+}
+
+.tempAS {
+    position: relative;
+    max-height: 11em;
+    max-width: 100%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.astxt {
+    max-width: 18em;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-family: 'Libre Caslon Display';
+    text-align: justify;
+    font-size: 18px;
+}
+
+.astxt p {
+    padding-top: 1em;
+    font-family: 'Maitree';
+
+}
+
+.zoom {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 11em;
+}
+
+.autosys:hover {
+    background-color: #F5EBE0;
+}
+
+.autosys:hover .tempAS {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* PROJETO 2 - CALCULADORA PHP */
+
+.calc {
+    background: #F5EBE0;
+    max-width: 23em;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 50px 5px #1e1e1e49;
+}
+
+.tempCA {
+    position: relative;
+    max-height: 11em;
+    max-width: 100%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+
+.catxt {
+    max-width: 18em;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-family: 'Libre Caslon Display';
+    text-align: justify;
+    font-size: 18px;
+}
+
+.catxt p {
+    padding-top: 1em;
+    font-family: 'Maitree';
+
+}
+
+.calc:hover .tempCA {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* TECNOLOGIAS */
+
+#technologies {
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    background: #FEFCF3;
+    z-index: -2;
+}
+
+.effect1 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 100px;
+    width: 100px;
+    filter: blur(4px);
+    position: absolute;
+    top: 60%;
+    right: 45%;
+    transition: .5s;
+    z-index: -1;
+}
+
+.effect2 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 200px;
+    width: 200px;
+    filter: blur(2px);
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    transition: .5s;
+    z-index: 0;
+}
+
+.effect3 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 50px;
+    width: 50px;
+    filter: blur(5px);
+    position: absolute;
+    top: 10%;
+    right: 45%;
+    transition: .5s;
+    z-index: -1;
+}
+
+.effect4 {
+    border-radius: 100%;
+    background-image: linear-gradient(0deg, #9F8772, #C8DBBE);
+    height: 70px;
+    width: 70px;
+    filter: blur(3px);
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    transition: .5s;
+    z-index: 0;
+}
+
+.flex-tech {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 10em;
+}
+
+.advanced {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 800px;
+    padding-top: 3em;
+}
+
+.advanced div {
+    box-shadow: 5px 5px 30px -4px #1e1e1e41;
+    border: #ccc solid 1px;
+    backdrop-filter: blur(7px);
+    background-color: #ffffff10;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    width: 185px;
+}
+
+.advanced div p {
+    color: #1E1E1E;
+    text-align: center;
+    max-width: 185px;
+    font-size: 16px;
+    font-family: 'Maitree';
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+#technologies h1 {
+    position: relative;
+    color: #1E1E1E;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-style: italic;
+    max-width: 230px;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.flex-tech p {
+    font-family: 'Maitree';
+    color: #1E1E1E;
+    font-size: 24px;
+    z-index: 10;
+
+}
+
+.flex-tech img {
+    height: 185px;
+}
+
+
+/* CONTATO */
+
+#contact {
+    position: relative;
+    background: #1E1E1E;
+    top: 100vh;
+    width: 100%;
+}
+
+#contact h1 {
+    position: relative;
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-style: italic;
+    max-width: 150px;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+#contact .frase {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Maitree';
+    color: #ccc;
+
+}
+
+.contatos {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(5, 0.2fr);
+}
+
+.links div {
+    align-content: center;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F3EFE0;
+    transition: 0.2s;
+}
+
+.links div:nth-child(5) {
+    position: absolute;
+    background-color: transparent;
+    right: 20%;
+    bottom: 6.5em;
+}
+
+.links div:nth-child(6) {
+    position: absolute;
+    background-color: transparent;
+    top: 20em;
+}
+
+.links div:hover {
+    background-color: #FEFCF3;
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.links div:nth-child(5):hover {
+    background-color: transparent;
+}
+
+.links div:nth-child(6):hover {
+    background: transparent;
+
+}
+
+.links div:hover img {
+    max-height: 55px;
+}
+
+.copy p {
+    width: 340px;
+    color: #F5EBE0;
+}
+
+.contatos img {
+    max-height: 50px;
+    transition: 0.2s;
+
+}
+
+.frase {
+    font-size: 32px !important;
+    font-family: 'Libre Caslon Display' !important;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background: #1E1E1E;
+
+    }
+
+    #home h1 {
+        font-size: 50px;
+    }
+
+    #home nav {
+        max-width: 600px;
+        font-size: 12px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about img {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    #projects {
+        text-align: center;
+    }
+
+    .flex-proj {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .autosys {
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    #technologies {
+        text-align: center;
+    }
+
+    #technologies h1 {
+        margin: 0 auto;
+    }
+
+    .advanced {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        text-align: center;
+    }
+
+    #contact h1 {
+        margin: 0 auto;
+    }
+
+    .links {
+        position: relative;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 260px;
+    }
+
+    .links div:nth-child(5) {
+        display: none;
+    }
+
+    .links div:nth-child(6) {
+        position: relative;
+        top: 3em;
+        margin: 0 auto;
+        right: 100%;
+        padding-bottom: 3em;
+    }
+
+    .effect10 {
+        display: none;
+    }
+
+    .effect20 {
+        display: none;
+    }
+
+    .effect30 {
+        display: none;
+    }
+
+    .init-hidden {
+        opacity: 1;
+        left: 0;
+        right: 0;
+    }
+
+    .init-hidden-off {
+        opacity: 1;
+        left: 0;
+        right: 0;
+    }
+
+    .init-hidden-left {
+        opacity: 1;
+        left: 0;
+        right: 0;
+    }
+
+    .init-hidden-right {
+        opacity: 1;
+        left: 0;
+        right: 0;
+    }
+
+}
